@@ -6,7 +6,6 @@ https://www.acmicpc.net/problem/1915
 
 int map[MAX_SIZE][MAX_SIZE];
 int dp[MAX_SIZE][MAX_SIZE];
-
 int min(int a, int b) { return (a < b) ? a : b; }
 
 int main(void) {
