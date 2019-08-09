@@ -1,0 +1,44 @@
+// #10451 순열 사이클
+https://www.acmicpc.net/problem/10451
+
+#include <stdio.h>
+#include <cstring>
+using namespace std;
+
+int N;
+int arr[1001], visit[1001];
+
+int find_idx(void) {
+	for (int i = 1; i <= N; i++) {
+		if (!visit[i])
+			return i;
+	}
+	return 0;
+}
+
+int main(void) {
+	int T;
+	scanf("%d", &T);
+	for (int t = 1; t <= T; t++) {
+		scanf("%d", &N);
+		memset(visit, 0, sizeof(visit));
+		for (int i = 1; i <= N; i++) {
+			scanf("%d", &arr[i]);
+		}
+		int res = 0, num = 0;
+		int curidx = 1;
+		int cur;
+		while (num <= N) {
+			if (visit[curidx]) {
+				curidx = find_idx();
+				res++;
+			}
+			visit[curidx]++;
+			cur = arr[curidx];
+			curidx = cur;
+			num++;
+		}
+		printf("%d\n", res);
+	}
+	return 0;
+}
