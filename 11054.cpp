@@ -4,8 +4,7 @@ https://www.acmicpc.net/problem/11054
 #include <stdio.h>
 
 int n;
-int arr[1001];
-int dp[2][1001];
+int arr[1001], dp[2][1001];
 
 int max(int a, int b){return (a > b) ? a : b;}
 
