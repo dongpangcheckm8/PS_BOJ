@@ -1,3 +1,6 @@
+// #2406 (안정적인 네트워크)
+https://www.acmicpc.net/problem/2406
+
 #include <stdio.h>
 #include <vector>
 #include <queue>
